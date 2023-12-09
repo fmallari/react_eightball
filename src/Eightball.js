@@ -7,12 +7,12 @@ function choice(arr) {
 }
 
 function Eightball(props) {
-  const [msg, Setmsg] = useState("Think of a question");
+  const [msg, setMsg] = useState("Think of a question");
   const [color, setColor] = useState("black");
 
   function handleClick() {
-    const { msg, color } = choice(props.answer);
-    Setmsg(msg);
+    const { msg, color } = choice(props.answers);
+    setMsg(msg);
     setColor(color);
   }
 
